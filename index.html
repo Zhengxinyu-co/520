@@ -7,16 +7,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
+    <header class="hero" id="top">
       <nav class="topbar" aria-label="主导航">
         <a class="brand" href="#top" aria-label="520 纪念相册首页">520</a>
-        <div class="nav-links">
-          <a href="#gallery">照片</a>
-          <a href="#memory">纪念</a>
+        <div class="nav-actions">
+          <div class="nav-links">
+            <a href="#gallery">照片</a>
+            <a href="#memory">纪念</a>
+          </div>
+          <button class="music-toggle" type="button" aria-pressed="false">
+            <span class="music-icon" aria-hidden="true"></span>
+            <span class="music-label">播放音乐</span>
+          </button>
         </div>
       </nav>
 
-      <section class="hero-content" id="top">
+      <section class="hero-content">
         <p class="eyebrow">May 20</p>
         <h1>把喜欢的瞬间，都放在这里。</h1>
         <p class="hero-copy">
@@ -35,6 +41,30 @@
         <p>
           用简单干净的版式，把桌面 520 文件夹里的照片整理成一个可以直接打开的网站。
         </p>
+      </section>
+
+      <section class="slider-section" aria-labelledby="slider-title">
+        <div class="section-heading">
+          <p class="section-kicker">Slideshow</p>
+          <h2 id="slider-title">慢慢切换的照片</h2>
+        </div>
+
+        <div class="slider" aria-label="照片轮播">
+          <button class="slider-button prev" type="button" aria-label="上一张照片">‹</button>
+          <div class="slides">
+            <img class="slide is-active" src="assets/photos/photo-01.jpg" alt="520 轮播照片 1" />
+            <img class="slide" src="assets/photos/photo-02.jpg" alt="520 轮播照片 2" />
+            <img class="slide" src="assets/photos/photo-03.jpg" alt="520 轮播照片 3" />
+            <img class="slide" src="assets/photos/photo-04.jpg" alt="520 轮播照片 4" />
+          </div>
+          <button class="slider-button next" type="button" aria-label="下一张照片">›</button>
+          <div class="slider-dots" aria-label="选择照片">
+            <button class="dot is-active" type="button" aria-label="第 1 张照片"></button>
+            <button class="dot" type="button" aria-label="第 2 张照片"></button>
+            <button class="dot" type="button" aria-label="第 3 张照片"></button>
+            <button class="dot" type="button" aria-label="第 4 张照片"></button>
+          </div>
+        </div>
       </section>
 
       <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
